@@ -11,7 +11,7 @@ $(function(){
    $("a").on("click", function(e){
 
          e.preventDefault();
-         $("#right-content").load("http://yaoshuyin.github.io/"+$(this).attr("href"));
+         $("#right-content").load("https://yaoshuyin.github.io/"+$(this).attr("href"));
          return false;
 
    });  
