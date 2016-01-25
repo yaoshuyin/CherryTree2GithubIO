@@ -72,7 +72,7 @@ for line in f:
        elif cengshu != tmp and cengshu<tmp:
            if nodes>0:
                print "   " * (tmp+1) , "</li>"
-           print "   " * tmp , "</ul>" * (tmp-cengshu)
+           print "   " * tmp , "</ul></li>" * (tmp-cengshu)
            tmp=cengshu
        else:
            if nodes>0:
@@ -109,6 +109,7 @@ sed -i -E "s/(<td valign=\"top\" align=cons.TAG_PROP_LEFT width=20%>).*(<td vali
 sed -i -e "s/<\!doctype html><html><head>.*content=\"CherryTree\"><\/head><body><table width=\"100%\"><tr><td>//g" ../yaoshuyin.github.io/*.html
 sed -i -e "s/<\/td><\/tr><\/table><\/body><\/html>//g" ../yaoshuyin.github.io/*.html
 
+sed -i -e "s/<span style=\"font-family: Sans; font-size:12pt\">/<meta charset=\"UTF-8\">\n<link rel=\"stylesheet\" href=\"css\/content.files.css\"><span id=\"id_content_span\">/g" ../yaoshuyin.github.io/*.html
 
 cp -pfr ChreeTreeNav.html ../yaoshuyin.github.io/index.html
 cp -pfr js css ../yaoshuyin.github.io/
